@@ -1,0 +1,14 @@
+services:
+  - "./services/service-a"
+  - "./services/service-b"
+# environment and dependencies are theoretical, for now...
+environment:
+  - DB_HOST=localhost
+  - DB_PASS=testing123
+  - DB_USER=postgres
+  - REDIS_ADDR=localhost:6379
+dependencies:
+  - postgres:
+      commands:
+        - docker run -d -e POSTGRES_PASSWORD=testing123 -p 5432:5432 postgres:alpine
+        - docker run -d -p 6379:6379 redis:alpine

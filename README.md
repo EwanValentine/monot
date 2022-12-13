@@ -69,4 +69,4 @@ Fin.
 - Some sort of Docker networking integration so you can stitch services together locally
 - Shared services - for example, running an instance of Postgres and Redis for all of the services, which could be defined as 'dependencies' in the `monot-manifest` file
 - State management - as in, watch for services having been changed and storing that information - so that on CI/CD we can tell the pipeline which services have changed, and therefor need to be re-deployed
-
+- Environment variable/config management
