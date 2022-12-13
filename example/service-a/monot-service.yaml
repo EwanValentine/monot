@@ -1,0 +1,5 @@
+name: "service-a"
+tasks:
+  run-local:
+    commands:
+      - go run main.go
